@@ -1,0 +1,32 @@
+.notFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background:  hsl(252, 100%, 12%);
+    color: var(--white);
+    text-align: center;
+  }
+  
+  .errorCode {
+    font-size: 100px;
+    font-weight: bold;
+    color: linear-gradient(to right, var(--flourescent-blue), var(--blue-ryb));
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .errorText {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--white);
+    margin: 10px 0;
+  }
+  
+  .description {
+    font-size: 18px;
+    color: var(--heliotrope-gray);
+    max-width: 600px;
+    line-height: 1.5;
+  }
+  

@@ -1,0 +1,90 @@
+.homePage {
+    background-color: hsl(252, 80%, 14%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero {
+    padding: 100px 0 var(--section-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .heroTitle {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .heroText {
+    color: var(--white);
+    font-size: var(--fs-4);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .heroBtnGroup {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primary {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background: var(--gradient);
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background: #AC6CFF;
+  }
+  
+  .heroBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .heroBanner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 990px) {
+    .heroBanner {
+      display: none;
+    }
+    .hero {
+      text-align: center;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heroTitle {
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heroBanner {
+      display: none;
+    }
+    .btn-primary {
+      padding: 8px 15px;
+    }
+  }
+  

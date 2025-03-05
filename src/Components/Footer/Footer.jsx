@@ -37,7 +37,7 @@ const Footer = () => {
       <hr className={styles.footerLine} />
 
       <div className="text-center mt-3">
-        <p className="mb-0">&copy; 2024 Your Website. All Rights Reserved.</p>
+        <p className="mb-0">&copy; 2025 Podcast. All Rights Reserved.</p>
       </div>
     </footer>
   );

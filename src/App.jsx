@@ -6,6 +6,7 @@ import PodcastDetails from './Components/PodcastDetails/PodcastDetails';
 import NotFound from './Components/NotFound/NotFound';
 import { PodcastProvider } from './Components/Context/getPodcasts';
 
+
 function App() {
   const routes = createBrowserRouter([
     {

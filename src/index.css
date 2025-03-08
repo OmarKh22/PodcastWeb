@@ -2,8 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Changa", sans-serif;
   }
 
+  body{
+    direction: rtl;
+    text-align: right;
+  }
 
 :root {
 
@@ -13,7 +18,7 @@
   
     --flourescent-blue: hsl(178, 100%, 49%);
     --heliotrope-gray: hsl(253, 15%, 70%);
-    --russian-violet: hsl(252, 80%, 16%);
+    --russian-violet: #C5A666;  /* navbar color */
     --dark-violet: hsl(252, 100%, 12%);
     --space-cadet: hsl(247, 43%, 20%);
     --blue-ryb: hsl(221, 100%, 50%);

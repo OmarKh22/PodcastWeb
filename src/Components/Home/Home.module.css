@@ -1,28 +1,21 @@
 .homePage {
-    background-color: #13012f;
+    /* background-color: #865D36; */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url('../../Assets/images/home/heroImg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
   }
-  
-  .hero {
-    padding: 100px 0 var(--section-padding);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+
   
   .heroTitle {
     width: 100%;
     max-width: 400px;
-    margin-bottom: 20px;
-  }
-  
-  .heroText {
-    color: var(--white);
-    font-size: var(--fs-4);
-    line-height: 1.8;
     margin-bottom: 20px;
   }
   
@@ -32,63 +25,43 @@
     flex-wrap: wrap;
   }
   
-  .btn-primary {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    background: var(--gradient);
-    color: white;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background: #AC6CFF;
-  }
-  
-  .heroBanner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .heroBanner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
-}
-  
-  /* Responsive Design */
-  @media (max-width: 990px) {
-    .heroBanner {
-      display: none;
+ 
+    .container {
+      width: 100%;
     }
+  
     .hero {
+      margin-top: auto;
+    }
+  
+    .heroContent {
+      padding: 1rem 0;
+    }
+  
+    .heroText {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 2rem;
+      border-radius: 8px;
       text-align: center;
-      flex-direction: column;
-      gap: 30px;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 100%;
     }
-  }
   
-  @media (max-width: 768px) {
-    .heroTitle {
-      max-width: 300px;
+    /* Media queries for responsiveness */
+    @media (min-width: 768px) {
+      .heroText {
+        font-size: 1.1rem;
+        padding: 2.5rem;
+      }
     }
-  }
   
-  @media (max-width: 480px) {
-    .heroBanner {
-      display: none;
+    @media (min-width: 992px) {
+      .heroText {
+        font-size: 1.5rem;
+        padding: 3rem;
+      }
     }
-    .btn-primary {
-      padding: 8px 15px;
-    }
-  }
   

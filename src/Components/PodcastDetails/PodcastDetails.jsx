@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import styles from "./PodcastDetails.module.css";
 import { PodcastContext } from "../Context/getPodcasts";
 import Loader from "../Loader/Loader";
+import img from "../../Assets/images/home/podcast-3.png";
+
 
 const PodcastDetails = () => {
   const { id } = useParams();
@@ -32,42 +34,68 @@ const PodcastDetails = () => {
   return (
     <div className={`${styles.detailsPage} mt-5 py-5 `}>
       <div className={styles.podcastContainer}>
-        
         {/* Podcast image */}
-        <div className={styles.imageSection}>
-          {podcast.images && podcast.images.length > 0 ? (
-            <img src={podcast.images[0]} alt={podcast.title} className={styles.podcastImage} />
-          ) : (
-            <div className={styles.placeholder}></div>
-          )}
-        </div>
 
         {/* Podcast content */}
-        <div className={styles.contentSection}>
           <h2 className={styles.title}>{podcast.title}</h2>
           <p className={styles.description}>{podcast.body}</p>
+          
+          <div className={styles.imageSection}>
+            {podcast.images && podcast.images.length > 0 ? (
+              <img
+                src={
+                  podcast.images &&
+                  Array.isArray(podcast.images) &&
+                  podcast.images.length > 0
+                    ? `https://simpleupload-production.up.railway.app/${podcast.images[0]}` // Add base URL if needed
+                    : img
+                }
+                alt={podcast.title || "Podcast image"}
+              />
+            ) : (
+              <div className={styles.placeholder}></div>
+            )}
+          </div>
 
+
+        <div className={styles.contentSection}>
           {/* Audio playback */}
-          {podcast.audio.length > 0 && (
-            <div className={styles.audioSection}>
-              <h3>🎧 Listen to the podcast</h3>
-              <audio controls className={styles.audioPlayer}>
-                <source src={podcast.audio[0]} type="audio/mp3" />
-                Your browser does not support audio playback.
-              </audio>
-            </div>
+          <div>
+          <h3>🎧 استمع إلى البودكاست</h3>
+          {podcast.audio &&
+          Array.isArray(podcast.audio) &&
+          podcast.audio.length > 0 ? (
+            <audio controls className={styles.audioPlayer}>
+              <source
+                src={`https://simpleupload-production.up.railway.app/${podcast.audio[0]}`}
+                type="audio/mp3"
+              />
+              Your browser does not support audio playback.
+            </audio>
+          ) : (
+            <p>No audio available for this podcast.</p>
           )}
+          </div>
 
           {/* Video playback */}
-          {podcast.videos.length > 0 && (
-            <div className={styles.videoSection}>
-              <h3>🎥 Watch the podcast</h3>
-              <video controls className={styles.videoPlayer}>
-                <source src={podcast.videos[0]} type="video/mp4" />
-                Your browser does not support video playback.
-              </video>
-            </div>
+          <div>
+          <h3>🎥 شاهد البودكاست</h3>
+          {podcast.videos &&
+            Array.isArray(podcast.videos) &&
+            podcast.videos.length > 0 ? (
+              <div className={styles.videoSection}>
+                <video controls className={styles.videoPlayer}>
+                  <source
+                    src={`https://simpleupload-production.up.railway.app/${podcast.videos[0]}`}
+                    type="video/mp4"
+                  />
+                  Your browser does not support video playback.
+                </video>
+              </div>
+            ) : (
+            <p>No Video available for this podcast.</p>
           )}
+          </div>
         </div>
       </div>
     </div>

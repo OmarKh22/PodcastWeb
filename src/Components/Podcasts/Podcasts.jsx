@@ -36,17 +36,26 @@ const Podcasts = () => {
 
   return (
     <div className={styles.podcastPage}>
-      <div className={`${styles.podcast} container my-5 p-3`} id="podcast">
+      <div className={`${styles.podcast} container  p-3`} id="podcast">
         <ul className={styles.podcastList}>
           {podcasts.map((podcast) => (
             <li key={podcast._id}>
-              <Link 
-                to={`/podcast/${podcast._id}`} 
-                className={styles.podcastCard} 
-                onClick={scrollToTop} 
+              <Link
+                to={`/podcast/${podcast._id}`}
+                className={styles.podcastCard}
+                onClick={scrollToTop}
               >
                 <figure className={styles.cardBanner}>
-                  <img src={podcast.image || img} alt={podcast.title} />
+                  <img
+                    src={
+                      podcast.images &&
+                      Array.isArray(podcast.images) &&
+                      podcast.images.length > 0
+                        ? `https://simpleupload-production.up.railway.app/${podcast.images[0]}` // Add base URL if needed
+                        : img
+                    }
+                    alt={podcast.title || "Podcast image"}
+                  />
                   <div className={styles.cardBannerIcon}>
                     <i className="fa-solid fa-play"></i>
                   </div>

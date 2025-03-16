@@ -9,13 +9,11 @@ const Footer = () => {
     <footer className={`${styles.footer}`}>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-8 text-center text-lg-start mb-4">
+          <div className="col-lg-8 text-center text-lg-end mb-4">
             <img src={podcastHome} alt="Micro logo" width="150" />
             <p>
-              [Podcast Name] is a platform where engaging conversations and
-              insightful discussions come to life. Tune in to explore diverse
-              topics, hear from inspiring guests, and discover stories that
-              inform, entertain, and inspire. 🎙️✨
+              منصة إلهام.. حيث يلتقي الإلهام بالإبداع، وتُروى القصص التي تستحق
+              أن تُسمع.. 🎙️✨
             </p>
           </div>
 
@@ -27,17 +25,17 @@ const Footer = () => {
           </div> */}
 
           <div className="col-lg-4 text-center text-lg-end">
-            <h4 className={styles.footerTitle}>Contact Us</h4>
+            <h4 className={styles.footerTitle}>تواصل معنا</h4>
             <p>
               Email:{" "}
-              <a href="mailto:contact@yourwebsite.com" className="text-light">
-                contact@yourwebsite.com
+              <a href="mailto:elham_podium@outlook.com" className="text-light">
+                elham_podium@outlook.com
               </a>
             </p>
             <p>
               Phone:{" "}
-              <a href="tel:+123456789" className="text-light">
-                +1 234 567 89
+              <a href="tel:+20 11 40169536" className="text-light">
+                +20 11 40169536
               </a>
             </p>
 
@@ -62,7 +60,7 @@ const Footer = () => {
       <hr className={styles.footerLine} />
 
       <div className="text-center mt-3">
-        <p className="mb-0">&copy; 2025 Podcast. All Rights Reserved.</p>
+        <p className="mb-0"> منصة إلهام ، جميع الحقوق محفوظة. &copy; 2025</p>
       </div>
     </footer>
   );

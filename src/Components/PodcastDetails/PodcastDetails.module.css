@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #e1dee4, #333b69);
+    background: linear-gradient(to bottom, #6c4320, #ad8469);
     
   }
   
@@ -13,15 +13,13 @@
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     margin-top: 20px;
     text-align: center;
   }
   .imageSection {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 300px;
     margin-bottom: 20px;
   }
   
@@ -41,6 +39,10 @@
   
   .contentSection {
     padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      gap: 100px;
   }
   
   .title {
@@ -78,6 +80,11 @@
   .videoSection {
     margin-top: 20px;
   }
+
+  .videoPlayer{
+    width: 500px;
+    height: 500px;
+  }
   
   .audioPlayer,
   .videoPlayer {
@@ -85,7 +92,7 @@
     max-width: 600px;
     border-radius: 8px;
     outline: none;
-  }
+}
   
   @media (max-width: 768px) {
     .podcastContainer {

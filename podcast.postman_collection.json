@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "99fe1218-3c96-4be4-b45a-98e5118f5973",
+		"name": "podcast",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13303262"
+	},
+	"item": [
+		{
+			"name": "createPost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "good",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "good podcast...",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/Users/moataznaeem/Desktop/projects/lothgha/landing-page/src/assets/2@2x.png"
+						},
+						{
+							"key": "videos",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "audio",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://simpleupload-production.up.railway.app/posts",
+					"protocol": "https",
+					"host": [
+						"simpleupload-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "first post",
+							"disabled": true
+						},
+						{
+							"key": "body",
+							"value": "good podcast",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simpleupload-production.up.railway.app/posts",
+					"protocol": "https",
+					"host": [
+						"simpleupload-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPostById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://simpleupload-production.up.railway.app/post/67c68d1cc55fc6767fe0218c",
+					"protocol": "https",
+					"host": [
+						"simpleupload-production",
+						"up",
+						"railway",
+						"app"
+					],
+					"path": [
+						"post",
+						"67c68d1cc55fc6767fe0218c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

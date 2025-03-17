@@ -4,13 +4,14 @@ import styles from "./NavBar.module.css";
 // import logo from '../../Assets/images/logo.svg'
 import podcastHome from "../../Assets/images/home/podcastHome.png";
 import logo from "../../Assets/images/home/logo.png";
+
 const NavBar = () => {
   return (
     <>
       <header className={`${styles.active}`}>
         <nav className="navbar navbar-expand-lg  shadow-sm">
           <div className="container">
-            <Link className="navbar-brand" to="home">
+            <Link className="navbar-brand" to="/home">
               <img src={logo} alt="Micro logo" width="180" />
             </Link>
 
